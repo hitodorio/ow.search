@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myCtl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="HitoDorio" />
+    <title>search.ow – OW decentralized search engine</title>
+    <meta name="description" content="decentralized search engine">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- add styles -->
+    <link href="http://dcdn.ow/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- add javascripts -->
+     <script src="http://dcdn.ow/content/search.js"></script>
+    
+    
+	      <link href="http://dcdn-0.ow/bootstrap3.css" rel="stylesheet" data-semver="3.3.4" data-require="bootstrap-css@3.3.4" />
+	      
+  
+
+
+
+
+<script src="http://dcdn-0.ow/jquery.js"></script>
+
+
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="http://dcdn.ow/content/search-c.js"></script>
+<link rel="stylesheet" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch.js"></script>
+    
+    
+</head>
+
+
+	
+	
+<body>
+    <header>
+        <div class="wrap">
+            <!-- logo -->
+            <img class="logo" src="images/search_ow.gif"/>
+
+            <!-- navigation menu -->
+            <nav>
+                <ul>
+                 <li><a id="indexBtn" href="http://index.ow/" ng-class="{activeSmall:part == 'index'}" >inDEX</a></li>
+                     <li><a id="searchBtn" href="http://search.ow/#!/search" ng-class="{activeSmall:part == 'search'}" >search</a></li>
+                     <li><a id="dcdnBtn" href="http://dcdn.ow/#!/search" ng-class="{activeSmall:part == 'dcdn'}" >dcdn</a></li>
+                    <li><a id="aboutBtn" href="http://n.ow/#!/about" ng-class="{activeSmall:part == 'about'}">about</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  
+
+    <!-- main content -->
+    <div style="position:relative">
+         <div style="width:100%">
+	         
+	         
+	         <div class="ow">
+	         
+	       
+	        
+	        <div style="padding-top: 36px;">
+		        
+<form>
+<div class="tipue_search_group ow" style="width: 350px">
+<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+</div>
+</form>
+		       
+<div id="tipue_search_content"></div>
+</div>
+	         </div>
+       
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
+	        
+      
+</body>
+</html>
